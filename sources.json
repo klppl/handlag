@@ -16,5 +16,14 @@
     "subpath": null,
     "updated": "2026-08-02T18:52:03Z",
     "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing"
+  },
+  {
+    "name": "no-ai-slop",
+    "repo": "petergyang/no-ai-slop",
+    "subpath": null,
+    "commit": "f2b25e603800dfc01ba93f1092056724eb93059e",
+    "added": "2026-08-02T19:38:53Z",
+    "updated": "2026-08-02T19:38:53Z",
+    "description": "Edit drafts into sharper, more human writing while preserving the writers personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI."
   }
 ]
