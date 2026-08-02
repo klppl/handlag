@@ -1,0 +1,28 @@
+name: Update Skills
+
+on:
+  schedule:
+    # Run automatically every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run update script
+        run: |
+          chmod +x ./scripts/*.sh
+          ./scripts/update-skills.sh
+
+      - name: Commit and push updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update vendored skills"
+          branch: main

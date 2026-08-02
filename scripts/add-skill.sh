@@ -42,7 +42,7 @@ jq --arg name "$NAME" \
    --arg repo "$REPO" \
    --arg commit "$COMMIT" \
    --arg added "$ADDED" \
-   '. += [{"name": $name, "repo": $repo, "commit": $commit, "added": $added}]' \
+   'if any(.[]; .name == $name) then map(if .name == $name then .commit = $commit | .added = $added | .repo = $repo else . end) else . + [{"name": $name, "repo": $repo, "commit": $commit, "added": $added}] end' \
    sources.json > "$TMP_JSON" && mv "$TMP_JSON" sources.json
 
 echo "Successfully added skill '$NAME' from $REPO ($COMMIT)."
