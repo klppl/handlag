@@ -9,6 +9,10 @@ handlag/
 ├── .github/workflows/
 │   ├── update-skills.yml    # Weekly automatic skill updater workflow
 │   └── validate.yml         # CI validation workflow on pushes & PRs
+├── prompts/                 # Copy-paste ready AI prompts collection
+│   ├── README.md            # Index of available prompts
+│   ├── codebase-refactoring.md
+│   └── security-audit.md
 ├── scripts/
 │   ├── add-skill.sh         # Vendor a skill (supports root repos and subpaths)
 │   ├── remove-skill.sh      # Remove a vendored skill
@@ -22,6 +26,12 @@ handlag/
 ```
 
 ## Usage
+
+### Prompts Collection
+
+Browse ready-to-use copy-paste prompts under [`prompts/`](prompts/README.md):
+- [Codebase Refactoring](prompts/codebase-refactoring.md) — Identify duplicate patterns, naming issues, and bottlenecks.
+- [Security Audit (Read-Only)](prompts/security-audit.md) — Evidence-based security audit covering OWASP top risks.
 
 ### Add a Skill
 
