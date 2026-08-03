@@ -11,6 +11,7 @@ Ready-to-use, battle-tested AI prompts for code analysis, security auditing, ref
 | [Codebase Refactoring Analysis](codebase-refactoring.md) | Analyze a codebase to identify repeated patterns, naming inconsistencies, and performance bottlenecks before building an actionable refactoring plan. |
 | [Read-Only Security Audit](security-audit.md) | Conduct an evidence-based security audit across auth, secrets, injection vectors, input validation, rate limiting, and data exposure without modifying code. |
 | [Spec Consultant (Questionnaire Strategy)](spec-consultant.md) | Review requirements or feature specs before coding by asking clarifying questions, listing architectural trade-offs, and surfacing hidden edge cases. |
+| [Subagent Orchestrator & Task Delegator](subagent-orchestrator.md) | Guide an AI orchestrator to decompose complex engineering tasks, delegate scoped work to subagents, manage context between tasks, and rigorously verify diffs. |
 | [Complete Test Suite Generator](test-suite-generator.md) | Generate high-coverage unit and integration tests including happy paths, edge cases, boundary conditions, and mock setups. |
 
 ## 🛠 How to Use
