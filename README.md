@@ -18,6 +18,7 @@ handlag/
 │   ├── remove-skill.sh      # Remove a vendored skill
 │   ├── list-skills.sh       # List all installed skills and metadata
 │   ├── update-skills.sh     # Update all tracked skills in sources.json
+│   ├── update-prompts-index.sh # Auto-generate prompts/README.md catalog
 │   ├── check-skills.sh      # Audit repository & skill integrity
 │   └── export-skills.sh     # Copy or symlink skills into your AI assistant directory
 ├── skills/                  # Vendored skill folders
@@ -29,9 +30,7 @@ handlag/
 
 ### Prompts Collection
 
-Browse ready-to-use copy-paste prompts under [`prompts/`](prompts/README.md):
-- [Codebase Refactoring](prompts/codebase-refactoring.md) — Identify duplicate patterns, naming issues, and bottlenecks.
-- [Security Audit (Read-Only)](prompts/security-audit.md) — Evidence-based security audit covering OWASP top risks.
+Browse ready-to-use copy-paste prompts in the [`prompts/`](prompts/README.md) catalog. To add a new prompt, drop a `.md` file into `prompts/` and run `./scripts/check-skills.sh` to update the index.
 
 ### Add a Skill
 

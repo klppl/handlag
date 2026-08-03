@@ -4,13 +4,13 @@ Ready-to-use, battle-tested AI prompts for code analysis, security auditing, ref
 
 ## 📚 Prompt Index
 
-| Prompt | Category | Summary |
-| :--- | :--- | :--- |
-| [Codebase Refactoring](codebase-refactoring.md) | Code Quality | Identifies duplicate patterns, naming inconsistencies, and performance bottlenecks before planning refactors. |
-| [Security Audit (Read-Only)](security-audit.md) | Security | Comprehensive evidence-based security audit covering OWASP top risks without modifying code. |
+| Prompt | Description |
+| :--- | :--- |
+| [Codebase Refactoring Analysis](codebase-refactoring.md) | Analyze a codebase to identify repeated patterns, naming inconsistencies, and performance bottlenecks before building an actionable refactoring plan. |
+| [Read-Only Security Audit](security-audit.md) | Conduct an evidence-based security audit across auth, secrets, injection vectors, input validation, rate limiting, and data exposure without modifying code. |
 
 ## 🛠 How to Use
 
-1. Browse to any `.md` file in this folder.
+1. Click any prompt above.
 2. Copy the text inside the **Copy-Paste Prompt** block.
 3. Paste directly into your AI coding assistant (Antigravity, Cursor, Claude, ChatGPT, etc.).

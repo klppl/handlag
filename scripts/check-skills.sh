@@ -11,6 +11,10 @@ WARNINGS=0
 
 echo "Auditing handlag skill repository..."
 
+if [ -f "$SCRIPT_DIR/update-prompts-index.sh" ]; then
+  "$SCRIPT_DIR/update-prompts-index.sh"
+fi
+
 if [ ! -f sources.json ]; then
   echo "❌ ERROR: sources.json missing."
   exit 1
