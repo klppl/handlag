@@ -2,8 +2,8 @@ name: Update Skills
 
 on:
   schedule:
-    # Run automatically every Sunday at 00:00 UTC
-    - cron: '0 0 * * 0'
+    # Run automatically every day at 00:00 UTC
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:

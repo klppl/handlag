@@ -1,6 +1,7 @@
 # Source
 
 - **Repo:** https://github.com/Nutlope/hallmark
-- **Commit:** aeb42fb354ff4efa36ab475773a082315a3af2ce
+- **Subpath:** skills/hallmark
+- **Commit:** 13ac0ec7e148655948100b6396439e481361d690
 - **Added:** 2026-08-02T18:49:07Z
-- **Updated:** 2026-08-02T18:52:02Z
+- **Updated:** 2026-08-06T20:36:54Z

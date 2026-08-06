@@ -2058,3 +2058,15 @@ html[data-theme="almanac"] body {
   }
 }
 
+
+/* — GRID — Swiss neo-grotesque: the display voice is lowercase ——————
+   Grid's differentiator is heavy Archivo run lowercase. The site's
+   shared headings follow the theme's display voice, same as Garden
+   drops to Young Serif's single weight. */
+[data-theme="grid"] h1,
+[data-theme="grid"] h2,
+[data-theme="grid"] .section__title,
+[data-theme="grid"] .hero__title,
+[data-theme="grid"] .hero__salutation {
+  text-transform: lowercase;
+}

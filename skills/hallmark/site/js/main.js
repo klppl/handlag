@@ -60,6 +60,7 @@ const THEMES = {
   carnival: "Carnival",
   lumen: "Lumen",
   cobalt: "Cobalt",
+  grid: "Grid",
 };
 const STORAGE_KEY = "hallmark-theme";
 
@@ -88,6 +89,7 @@ const ARCHETYPES = {
   lumen: { hero: "marquee", footer: "colophon" },
   hum: { hero: "hum", footer: "colophon" },
   cobalt: { hero: "cobalt", footer: "colophon" },
+  grid: { hero: "marquee", footer: "colophon" },
 };
 
 /* — Theme → genre map ——————————————————————————————————
@@ -120,12 +122,13 @@ const THEME_GENRES = {
   carnival:  "editorial",
   lumen:     "atmospheric",
   hum:       "playful",
+  grid:      "editorial",
 };
 
 /* — Locked hero title —————————————————————————————————
    The H1 string is the same across every theme. Only the visual
    treatment swaps — italic vs roman, serif vs sans, all-caps vs not.
-   The page is the demo: one sentence, twenty distinct designs. */
+   The page is the demo: one sentence, twenty-one distinct designs. */
 const HERO_TITLE = "A design skill that refuses to look AI-generated.";
 
 /* — Per-theme copy fixtures —————————————————————————————
@@ -228,7 +231,7 @@ const COPY = {
     quote: "An almanac is a book that knows where to look.",
     attrib: "Almanac, frontispiece",
     salutation: "Reference note,",
-    letterBody: "This page is a reference, not an argument. The numbers are the point: 21 macrostructures, 50 archetypes, 20 themes, 57 slop-test gates. Cross-referenced so the next page Hallmark builds is genuinely different from the last.",
+    letterBody: "This page is a reference, not an argument. The numbers are the point: 21 macrostructures, 50 archetypes, 21 themes, 57 slop-test gates. Cross-referenced so the next page Hallmark builds is genuinely different from the last.",
     signoff: "— editor",
     captionA: "Vol. III",
     captionB: "Plate 12",
@@ -460,7 +463,7 @@ const COPY = {
   carnival: {
     eyebrow: "NO TEMPLATES · NO DEFAULTS",
     title: HERO_TITLE,
-    lede: "20 themes that refuse to blend in. Pick one and the whole page changes — the bones, not the paint.",
+    lede: "21 themes that refuse to blend in. Pick one and the whole page changes — the bones, not the paint.",
     ctaLabel: "Install",
     proofLabel: "ON THE BILL",
     proofA: "21 page-shapes, 50 archetypes",
@@ -472,7 +475,7 @@ const COPY = {
     quote: "A PAGE THAT HEDGES IS A PAGE THAT FAILS.",
     attrib: "CARNIVAL",
     salutation: "WE PRINT POSTERS, NOT TEMPLATES.",
-    letterBody: "Every model was trained on the same page. Carnival refuses it — loud type, duo-tone ink, ornaments that mean it. 20 themes in the catalog, and not one of them whispers.",
+    letterBody: "Every model was trained on the same page. Carnival refuses it — loud type, duo-tone ink, ornaments that mean it. 21 themes in the catalog, and not one of them whispers.",
     signoff: "— CARNIVAL",
     captionA: "BILL 01",
     captionB: "OUT NOW",
@@ -492,7 +495,7 @@ const COPY = {
     quote: "two briefs, two pages — not one template, recoloured.",
     attrib: "lumen",
     salutation: "built to refuse the default.",
-    letterBody: "every model emits the same page. lumen is the part that refuses — lowercase classical serif, one accent verb, a hand-built apparatus where the orb used to be. twenty themes in the catalog, and the numbers hold under load.",
+    letterBody: "every model emits the same page. lumen is the part that refuses — lowercase classical serif, one accent verb, a hand-built apparatus where the orb used to be. twenty-one themes in the catalog, and the numbers hold under load.",
     signoff: "— lumen",
     captionA: "00 · spec",
     captionB: "night foundry",
@@ -538,6 +541,27 @@ const COPY = {
     captionA: "Cobalt",
     captionB: "v1.1",
   },
+  grid: {
+    eyebrow: "SWISS INTERNATIONAL",
+    title: HERO_TITLE,
+    lede: "The grid, made visible. A near-white sheet, exposed twelve-column hairlines, a heavy neo-grotesque set flush-left, and one signal ink spent on geometry: a square, a bar, a plate, a numeral cropped by the band edge. Rational, exact, built for institutions that plan in decades.",
+    ctaLabel: "Method",
+    proofLabel: "System",
+    proofA: "Exposed 12-column hairline grid",
+    proofB: "Archivo 800 · flush-left · tight tracking",
+    proofC: "One signal ink, spent on geometry",
+    cta: "Read the method",
+    stat: "12",
+    qualifier: "columns, exposed.",
+    quote: "Structure before surface. One grid, two weights, one ink.",
+    attrib: "Grid note",
+    salutation: "Schedule, then ship.",
+    letterBody: "Swiss International, executed straight: the grid is not scaffolding you hide, it is the design. Content snaps to twelve columns, asymmetric spans make the rhythm, and a single signal ink does all the emotional work: marks, one flooded plate, a giant cropped numeral.",
+    signoff: "Flush left,",
+    captionA: "Grid",
+    captionB: "Twelve columns",
+  },
+
 };
 
 /* — Slot population ———————————————————————————————————— */
