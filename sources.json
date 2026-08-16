@@ -5,7 +5,7 @@
     "commit": "13ac0ec7e148655948100b6396439e481361d690",
     "added": "2026-08-02T18:49:07Z",
     "subpath": "skills/hallmark",
-    "updated": "2026-08-09T01:43:09Z",
+    "updated": "2026-08-16T01:16:59Z",
     "description": "Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots. Use when the user asks to build a new app or landing page, wants to redesign something, invokes Hallmark by name, or uses audit/redesign/study."
   },
   {
@@ -14,7 +14,7 @@
     "commit": "523374dee72d67c7b2b5f858ea0094ffda49c3ac",
     "added": "2026-08-02T18:49:09Z",
     "subpath": null,
-    "updated": "2026-08-09T01:43:11Z",
+    "updated": "2026-08-16T01:17:01Z",
     "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing"
   },
   {
@@ -23,7 +23,7 @@
     "subpath": null,
     "commit": "d30eddb9e04562234f2070b5ee63ca4649d9a05e",
     "added": "2026-08-02T19:38:53Z",
-    "updated": "2026-08-09T01:43:13Z",
+    "updated": "2026-08-16T01:17:02Z",
     "description": "Edit drafts into sharper, more human writing while preserving the writers personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI."
   }
 ]
