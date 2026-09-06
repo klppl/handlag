@@ -5,7 +5,7 @@
     "commit": "13ac0ec7e148655948100b6396439e481361d690",
     "added": "2026-08-02T18:49:07Z",
     "subpath": "skills/hallmark",
-    "updated": "2026-08-30T03:56:17Z",
+    "updated": "2026-09-06T03:13:18Z",
     "description": "Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots. Use when the user asks to build a new app or landing page, wants to redesign something, invokes Hallmark by name, or uses audit/redesign/study."
   },
   {
@@ -14,16 +14,16 @@
     "commit": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
     "added": "2026-08-02T18:49:09Z",
     "subpath": null,
-    "updated": "2026-08-30T03:56:19Z",
+    "updated": "2026-09-06T03:13:21Z",
     "description": "Rewrite AI-sounding text so it reads naturally without changing what it says."
   },
   {
     "name": "no-ai-slop",
     "repo": "petergyang/no-ai-slop",
     "subpath": null,
-    "commit": "d30eddb9e04562234f2070b5ee63ca4649d9a05e",
+    "commit": "000650b156983f5159695b441477f4e63b25dc85",
     "added": "2026-08-02T19:38:53Z",
-    "updated": "2026-08-30T03:56:20Z",
+    "updated": "2026-09-06T03:13:23Z",
     "description": "Edit drafts into sharper, more human writing while preserving the writers personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI."
   }
 ]
