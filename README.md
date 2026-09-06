@@ -1,6 +1,6 @@
 # handlag
 
-A personal collection of AI skills, prompts, and know-how.
+A personal collection of AI skills, prompts, agent rules, and know-how.
 
 ## Structure
 
@@ -9,6 +9,9 @@ handlag/
 ├── .github/workflows/
 │   ├── update-skills.yml    # Weekly automatic skill updater workflow
 │   └── validate.yml         # CI validation workflow on pushes & PRs
+├── agents/                  # Ready-to-use AGENTS.md templates
+│   ├── README.md            # Index of agent configurations
+│   └── general.md           # Minimalist, low-ceremony personal baseline
 ├── prompts/                 # Copy-paste ready AI prompts collection
 │   ├── README.md            # Index of available prompts
 │   ├── codebase-refactoring.md
@@ -27,6 +30,14 @@ handlag/
 ```
 
 ## Usage
+
+### AGENTS.md Templates
+
+Browse project-level AI agent instructions in the [`agents/`](agents/README.md) catalog. To use a template, copy it into your target repository root as `AGENTS.md`:
+
+```bash
+cp agents/general.md /path/to/project/AGENTS.md
+```
 
 ### Prompts Collection
 
