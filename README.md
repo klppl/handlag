@@ -4,67 +4,59 @@ Personal collection of AI skills, prompts, and agent rules.
 
 ---
 
-## ⚡ At a Glance: Calling Skills in Chat
+## Skills Reference
 
-Type these directly in your chat with Gemini, Claude, or Codex:
-
-| Action | Chat Command / Prompt | Skill Used |
+| Skill | Trigger / Command | Function |
 | :--- | :--- | :--- |
-| **Audit UI Design** | `hallmark audit <file or url>` | `hallmark` |
-| **Redesign UI** | `hallmark redesign <file>` | `hallmark` |
-| **Fresh UI Build** | *"Build a landing page for X"* | `hallmark` (auto-triggered) |
-| **Humanize Text** | `humanizer: <paste text>` | `humanizer` |
-| **Remove AI Slop** | `no-ai-slop: <paste text>` | `no-ai-slop` |
+| `hallmark` | `hallmark audit <target>`, `hallmark redesign <target>` | Frontend UI design and anti-AI-slop rules |
+| `humanizer` | `humanizer` | Tone adjustment for natural voice |
+| `no-ai-slop` | `no-ai-slop` | Style enforcement and cliché removal |
 
-> **How agents locate skills:**
-> - **Gemini**: Auto-detects all skills globally once linked.
-> - **Claude & Codex**: Read `AGENTS.md` / `CLAUDE.md` and load `.agents/skills/`.
+### Agent Discovery
+- **Gemini / Antigravity**: Auto-detects skills globally once linked.
+- **Claude & Codex**: Reads `AGENTS.md` / `CLAUDE.md` and loads `.agents/skills/`.
 
 ---
 
-## 🚀 Zero-Copy Setup (Stop Downloading Files)
-
-Never manually download or copy markdown files into projects again.
+## Setup & Linking
 
 ### 1. Global Setup (Gemini / Antigravity)
-Symlink all skills globally once. Every Gemini project inherits them automatically:
+Symlink skills directory globally:
 ```bash
 ./scripts/export-skills.sh --symlink
 ```
 
 ### 2. Project Setup (Claude, Codex, Gemini)
-Wire up any project in one command. Links `.agents/skills`, copies `AGENTS.md`, and creates `CLAUDE.md`:
+Link `.agents/skills` and baseline `AGENTS.md` into a target repository:
 ```bash
 ./scripts/setup-project.sh /path/to/project
 ```
 
 ---
 
-## 📦 Adding & Updating Skills
+## Managing Skills
 
-Paste GitHub URLs straight from your browser:
+Vendor skills directly via GitHub URL:
 
 ```bash
-# Add a full repo
+# Add repository or subpath
 ./scripts/add-skill.sh https://github.com/owner/repo
-
-# Add a subpath / tree URL directly from browser
 ./scripts/add-skill.sh https://github.com/owner/repo/tree/main/skills/foo
 
-# Update all tracked skills to latest commits
+# Update all tracked skills
 ./scripts/update-skills.sh
 ```
 
 ---
 
-## 🛠 CLI Cheat Sheet
+## CLI Reference
 
-| Task | Command |
+| Command | Action |
 | :--- | :--- |
-| **List skills** | `./scripts/list-skills.sh` |
-| **Add skill** | `./scripts/add-skill.sh <url_or_repo> [name]` |
-| **Remove skill** | `./scripts/remove-skill.sh <name>` |
-| **Update all** | `./scripts/update-skills.sh` |
-| **Link project** | `./scripts/setup-project.sh <path>` |
-| **Global link** | `./scripts/export-skills.sh --symlink` |
-| **Integrity check** | `./scripts/check-skills.sh` |
+| `./scripts/list-skills.sh` | List installed skills |
+| `./scripts/add-skill.sh <url> [name]` | Add skill from GitHub |
+| `./scripts/remove-skill.sh <name>` | Remove skill and unregister |
+| `./scripts/update-skills.sh` | Pull latest updates |
+| `./scripts/setup-project.sh <path>` | Link skills into project |
+| `./scripts/export-skills.sh --symlink` | Link skills globally |
+| `./scripts/check-skills.sh` | Audit repository integrity |
