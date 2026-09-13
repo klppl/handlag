@@ -6,7 +6,25 @@ if [ "$#" -lt 1 ]; then
   exit 1
 fi
 
-INPUT_PATH="$1"
+RAW_INPUT="$1"
+
+# Strip protocol, domain, ssh, and trailing .git
+CLEAN_PATH="$RAW_INPUT"
+CLEAN_PATH="${CLEAN_PATH#https://}"
+CLEAN_PATH="${CLEAN_PATH#http://}"
+CLEAN_PATH="${CLEAN_PATH#git@github.com:}"
+CLEAN_PATH="${CLEAN_PATH#github.com/}"
+CLEAN_PATH="${CLEAN_PATH%.git}"
+
+# Remove /tree/<branch>/ or /blob/<branch>/
+CLEAN_PATH=$(echo "$CLEAN_PATH" | sed -E 's|/tree/[^/]+/|/|; s|/blob/[^/]+/|/|')
+
+# Strip leading/trailing slashes
+CLEAN_PATH="${CLEAN_PATH#/}"
+CLEAN_PATH="${CLEAN_PATH%/}"
+
+INPUT_PATH="$CLEAN_PATH"
+
 # Extract owner/repo (first 2 parts)
 REPO_BASE=$(echo "$INPUT_PATH" | cut -d'/' -f1,2)
 
@@ -104,3 +122,11 @@ jq --arg name "$NAME" \
    sources.json > "$TMP_JSON" && mv "$TMP_JSON" sources.json
 
 echo "Successfully added/updated skill '$NAME' from $INPUT_PATH ($COMMIT)."
+
+GLOBAL_SKILLS="${ANTIGRAVITY_SKILLS_DIR:-"$HOME/.gemini/antigravity/skills"}"
+if [ -d "$GLOBAL_SKILLS" ]; then
+  DEST="$GLOBAL_SKILLS/$NAME"
+  rm -rf "$DEST"
+  ln -s "$(cd "$TARGET_DIR" && pwd)" "$DEST"
+  echo "  [AUTO-SYNC] Linked into $DEST"
+fi

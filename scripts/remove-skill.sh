@@ -22,6 +22,12 @@ if [ -d "$TARGET_DIR" ]; then
   FOUND=true
 fi
 
+GLOBAL_SKILLS="${ANTIGRAVITY_SKILLS_DIR:-"$HOME/.gemini/antigravity/skills"}"
+if [ -e "$GLOBAL_SKILLS/$NAME" ] || [ -L "$GLOBAL_SKILLS/$NAME" ]; then
+  rm -rf "$GLOBAL_SKILLS/$NAME"
+  echo "Removed global link $GLOBAL_SKILLS/$NAME."
+fi
+
 if [ -f sources.json ]; then
   TMP_JSON=$(mktemp)
   jq --arg name "$NAME" 'map(select(.name != $name))' sources.json > "$TMP_JSON" && mv "$TMP_JSON" sources.json

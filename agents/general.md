@@ -60,3 +60,10 @@ Verified:
 Notes:
 - [Important tradeoffs or things left unverified]
 ```
+
+## 8. Skills & Specialized Runbooks
+When asked to perform specialized tasks or when a skill is invoked by name:
+* **UI & Frontend Design (`hallmark`):** Check `.agents/skills/hallmark/SKILL.md` or `~/.gemini/antigravity/skills/hallmark/SKILL.md`. Follow its strict guidelines for audits (`hallmark audit <target>`), redesigns (`hallmark redesign <target>`), and anti-AI-slop frontend styling.
+* **Human Voice & De-AI (`humanizer`, `no-ai-slop`):** Check `.agents/skills/humanizer/SKILL.md` or `no-ai-slop/SKILL.md` to strip corporate clichés and rewrite drafts into sharp, personal voice.
+* **Skill Discovery:** Look in `.agents/skills/<name>/SKILL.md` or `~/.gemini/antigravity/skills/<name>/SKILL.md` for domain-specific runbooks before executing complex tasks.
+
