@@ -48,8 +48,22 @@ if [ -z "$COMMIT" ]; then
   exit 1
 fi
 
+# Preserve existing local SKILL.md if present (e.g. if upstream repo lacks a SKILL.md)
+PRESERVED_SKILL_MD=""
+if [ -f "$TARGET_DIR/SKILL.md" ]; then
+  PRESERVED_SKILL_MD=$(mktemp)
+  cp "$TARGET_DIR/SKILL.md" "$PRESERVED_SKILL_MD"
+fi
+
 echo "Vendoring $INPUT_PATH into $TARGET_DIR..."
-npx degit "$INPUT_PATH" "$TARGET_DIR" --force
+npx --yes degit "$INPUT_PATH" "$TARGET_DIR" --force
+
+if [ -n "$PRESERVED_SKILL_MD" ]; then
+  if [ ! -f "$TARGET_DIR/SKILL.md" ]; then
+    cp "$PRESERVED_SKILL_MD" "$TARGET_DIR/SKILL.md"
+  fi
+  rm -f "$PRESERVED_SKILL_MD"
+fi
 
 NOW=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 

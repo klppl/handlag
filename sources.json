@@ -25,5 +25,14 @@
     "added": "2026-08-02T19:38:53Z",
     "updated": "2026-09-20T03:41:31Z",
     "description": "Edit drafts into sharper, more human writing while preserving the writers personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI."
+  },
+  {
+    "name": "agentseed",
+    "repo": "avinshe/agentseed",
+    "subpath": null,
+    "commit": "9886f8e94f9e2fe92814951c6adda6dbcfc6bf23",
+    "added": "2026-09-19T20:44:19Z",
+    "updated": "2026-09-20T08:14:39Z",
+    "description": "Generate and initialize production-grade AGENTS.md, CLAUDE.md, .cursorrules, and AI agent configuration files from static codebase analysis. Use when seeding agent instructions for a project, auditing existing AGENTS.md against current project architecture, or invoking agentseed."
   }
 ]
