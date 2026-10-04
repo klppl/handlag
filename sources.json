@@ -5,16 +5,16 @@
     "commit": "13ac0ec7e148655948100b6396439e481361d690",
     "added": "2026-08-02T18:49:07Z",
     "subpath": "skills/hallmark",
-    "updated": "2026-09-27T03:58:08Z",
+    "updated": "2026-10-04T04:36:01Z",
     "description": "Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots. Use when the user asks to build a new app or landing page, wants to redesign something, invokes Hallmark by name, or uses audit/redesign/study."
   },
   {
     "name": "humanizer",
     "repo": "blader/humanizer",
-    "commit": "9862685f575c65a8247f90369951df1b3416e3d6",
+    "commit": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
     "added": "2026-08-02T18:49:09Z",
     "subpath": null,
-    "updated": "2026-09-27T03:58:10Z",
+    "updated": "2026-10-04T04:36:02Z",
     "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says."
   },
   {
@@ -23,7 +23,7 @@
     "subpath": null,
     "commit": "000650b156983f5159695b441477f4e63b25dc85",
     "added": "2026-08-02T19:38:53Z",
-    "updated": "2026-09-27T03:58:12Z",
+    "updated": "2026-10-04T04:36:04Z",
     "description": "Edit drafts into sharper, more human writing while preserving the writers personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI."
   },
   {
@@ -32,7 +32,7 @@
     "subpath": null,
     "commit": "9886f8e94f9e2fe92814951c6adda6dbcfc6bf23",
     "added": "2026-09-19T20:44:19Z",
-    "updated": "2026-09-27T03:58:14Z",
+    "updated": "2026-10-04T04:36:05Z",
     "description": "Generate and initialize production-grade AGENTS.md, CLAUDE.md, .cursorrules, and AI agent configuration files from static codebase analysis. Use when seeding agent instructions for a project, auditing existing AGENTS.md against current project architecture, or invoking agentseed."
   }
 ]
